@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  		<filter-name>Struts2Filter</filter-name>
+  		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <!-- 统一编码过滤器,统一编码为UTF-8 -->
+  <filter>
+  	<filter-name>EncodingFilter</filter-name>
+  	<display-name>EncodingFilter</display-name>
+  	<description></description>
+  	<filter-class>com.mclin.filter.EncodingFilter</filter-class>
+  	<init-param>
+  		<param-name>encoding</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  <!-- 登录权限过滤器 -->
+  <filter>
+  	<filter-name>PermissionFilter</filter-name>
+  	<display-name>PermissionFilter</display-name>
+  	<description></description>
+  	<filter-class>com.mclin.filter.PermissionFilter</filter-class>
+  </filter>
+  <!-- 过滤器mapping -->
+  <filter-mapping>
+  		<filter-name>Struts2Filter</filter-name>
+  		<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>EncodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>PermissionFilter</filter-name>
+  	<url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+</web-app>

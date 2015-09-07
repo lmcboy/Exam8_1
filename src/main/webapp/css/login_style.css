@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url('../images/body_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* ------body_div 样式设置------ */
+.body_div{
+    width: 100%;
+    height: 100%;
+}
+
+/* ------title_div 样式设置------ */
+.title_div h3{
+    width: 180px;
+    height: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+
+}
+
+/* ------content_div 样式设置------ */
+.content_div{
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #e5e5e5;
+    width: 430px;
+    height: 260px;
+    background:rgba(255,255,255,0.8);
+}
+.content_div input{
+    width: 280px;
+}
+
+.input_style{
+    margin-bottom: 10px;
+}
+
+.form_title{
+    text-align: left;
+}
+.form_title h4{
+    font-weight: bold;
+}
+
+.form_footer{
+    color: red;
+}
